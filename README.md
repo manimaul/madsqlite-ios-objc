@@ -1,5 +1,7 @@
 # MadSqlite iOS Objective-C Framework
 
+[![Build Status](https://travis-ci.org/manimaul/madsqlite-ios-objc.svg?branch=master)](https://travis-ci.org/manimaul/madsqlite-ios-objc)
+
  * A simple [Sqlite](https://sqlite.org) abstraction
  * [FTS5](https://sqlite.org/fts5.html) and [RTree](https://www.sqlite.org/rtree.html) extension modules enabled
  * [BSD License](LICENSE.md)

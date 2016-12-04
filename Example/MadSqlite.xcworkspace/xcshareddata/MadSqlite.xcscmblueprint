@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F5CFFF09E342C3911167743D6C8DD11C07E11E1A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "787A867FBFA74BF2177105CFCB667BCDBCE8FF09" : 9223372036854775807,
+    "F5CFFF09E342C3911167743D6C8DD11C07E11E1A" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "33EA6F6D-BEAD-4F4C-BC94-65F740BB0D98",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "787A867FBFA74BF2177105CFCB667BCDBCE8FF09" : "madsqlite-ios-objc\/madsqlite-core\/",
+    "F5CFFF09E342C3911167743D6C8DD11C07E11E1A" : "madsqlite-ios-objc\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MadSqlite",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/MadSqlite.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/manimaul\/madsqlite-core.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "787A867FBFA74BF2177105CFCB667BCDBCE8FF09"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/manimaul\/madsqlite-ios-objc.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F5CFFF09E342C3911167743D6C8DD11C07E11E1A"
+    }
+  ]
+}

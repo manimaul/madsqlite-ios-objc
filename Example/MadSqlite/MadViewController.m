@@ -7,8 +7,8 @@
 //
 
 #import "MadViewController.h"
-#import "MadSqliteFactory.hh"
-#import "MadDatabase.h"
+#import "MADSqliteFactory.hh"
+#import "MADDatabase.h"
 
 @interface MadViewController ()
 

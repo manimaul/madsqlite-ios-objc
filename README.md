@@ -9,6 +9,6 @@ MadSqlite is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'MadSqlite', :git => 'https://github.com/manimaul/madsqlite.git', tag => '0.1.0', :submodules => true
+pod 'MadSqlite', :git => 'https://github.com/manimaul/madsqlite-ios-objc.git', tag => '0.1.0', :submodules => true
 ```
 

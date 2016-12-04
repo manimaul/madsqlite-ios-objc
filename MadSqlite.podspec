@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                   = 'MadSqlite'
-  s.version                = '0.1.0'
+  s.version                = '0.1.1'
 
   s.summary                = 'A simple Sqlite Abstraction'
   s.description            = 'A simple Sqlite Abstraction with FTS5 and R*Tree enabled'
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.source                 = { :git => 'https://github.com/manimaul/madsqlite-ios-objc.git', :tag => s.version.to_s, :submodules => true }
 
   s.ios.deployment_target  = '8.0'
-  s.source_files           = 'ios/MadSqlite/Classes/**/*.{h,m,hh,mm}',
+  s.source_files           = 'MadSqlite/Classes/**/*.{h,m,hh,mm}',
 			     'madsqlite-core/src/main/cpp/*.{hpp}',
 			     'madsqlite-core/src/main/cpp/ContentValues.cpp',
 			     'madsqlite-core/src/main/cpp/Cursor.cpp',
@@ -29,9 +29,10 @@ Pod::Spec.new do |s|
 			     'madsqlite-core/src/main/cpp/sqlite-amalgamation-3140200/sqlite3.c',
                              'madsqlite-core/src/main/cpp/*.{hpp}',
 			     'madsqlite-core/src/main/cpp/sqlite-amalgamation-3140200/sqlite3.h'
+
   s.private_header_files   = 'madsqlite-core/src/main/cpp/*.{hpp}',
-                             'ios/MadSqlite/Classes/**/*Impl.{hh}',
-                             'madsqlite/src/main/cpp/sqlite-amalgamation-3140200/sqlite3.h'
+                             'MadSqlite/Classes/**/*Impl.{hh}',
+                             'madsqlite-core/src/main/cpp/sqlite-amalgamation-3140200/sqlite3.h'
 
   s.requires_arc           = true
 

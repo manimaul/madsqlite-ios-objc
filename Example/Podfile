@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MadSqlite_Example' do
+  pod 'MadSqlite', :path => '../'
+
+  target 'MadSqlite_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

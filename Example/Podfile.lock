@@ -1,0 +1,16 @@
+PODS:
+  - MadSqlite (0.1.0)
+
+DEPENDENCIES:
+  - MadSqlite (from `../`)
+
+EXTERNAL SOURCES:
+  MadSqlite:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MadSqlite: 7446ab50b4e086c27a8adf804647e82bd5d2ef4c
+
+PODFILE CHECKSUM: c7aaffc259bc0c7db242b0ecc20f9b666196b480
+
+COCOAPODS: 1.1.1

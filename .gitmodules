@@ -1,0 +1,3 @@
+[submodule "madsqlite-core"]
+	path = madsqlite-core
+	url = https://github.com/manimaul/madsqlite-core.git

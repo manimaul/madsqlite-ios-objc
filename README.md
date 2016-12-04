@@ -13,6 +13,6 @@ pod 'MadSqlite', '~> 0.1.1'
 ```
 or
 ```ruby
-pod 'MadSqlite', :git => 'https://github.com/manimaul/madsqlite-ios-objc.git', tag => '0.1.1', :submodules
+pod 'MadSqlite', :git => 'https://github.com/manimaul/madsqlite-ios-objc.git', :tag => '0.1.1', :submodules => true
 ```
 

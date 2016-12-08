@@ -3,7 +3,7 @@
 // Copyright (c) 2016 William Kamp. All rights reserved.
 //
 
-#include "Database.hpp"
+#include "MadDatabase.hpp"
 #import "MADDatabaseImpl.hh"
 #import "MADContentValues.h"
 #import "MADContentValuesImpl.hh"
@@ -11,11 +11,11 @@
 
 @implementation MADDatabaseImpl
 
-std::shared_ptr<Database> database;
+std::shared_ptr<madsqlite::MadDatabase> database;
 
 - (instancetype)init {
     if (self = [super init]) {
-        database = std::make_shared<Database>();
+        database = madsqlite::MadDatabase::openInMemoryDatabase();
         return self;
     } else {
         return nil;
@@ -24,7 +24,7 @@ std::shared_ptr<Database> database;
 
 - (instancetype)initWithPath:(NSString *)path {
     if (self = [super init]) {
-        database = std::make_shared<Database>(path.UTF8String);
+        database = madsqlite::MadDatabase::openDatabase(path.UTF8String);
         return self;
     } else {
         return nil;

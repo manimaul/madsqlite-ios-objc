@@ -4,16 +4,17 @@
 //
 
 #import "MadContentValuesImpl.hh"
+#include "MadConstants.hpp"
 
 
 @implementation MADContentValuesImpl {
 
-    std::shared_ptr<ContentValues> contentValues;
+    std::shared_ptr<madsqlite::MadContentValues> contentValues;
 }
 
 - (instancetype)init {
     if (self = [super init]) {
-        contentValues = std::shared_ptr<ContentValues>(new ContentValues());
+        contentValues = std::shared_ptr<madsqlite::MadContentValues>(new madsqlite::MadContentValues());
         return self;
     } else {
         return nil;
@@ -33,8 +34,8 @@
 }
 
 - (void)putBlob:(NSString *)key withValue:(NSData *)value {
-    byte *charBuf = (byte *) value.bytes;
-    std::vector<byte> valVec(charBuf, charBuf + value.length);
+    madsqlite::byte *charBuf = (madsqlite::byte *) value.bytes;
+    std::vector<madsqlite::byte> valVec(charBuf, charBuf + value.length);
     contentValues->putBlob(key.UTF8String, valVec);
 }
 
@@ -42,7 +43,7 @@
     contentValues->clear();
 }
 
-- (std::shared_ptr<ContentValues>)getValues {
+- (std::shared_ptr<madsqlite::MadContentValues>)getValues {
     return contentValues;
 }
 

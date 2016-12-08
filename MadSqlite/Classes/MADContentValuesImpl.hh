@@ -5,13 +5,13 @@
 
 #import <Foundation/Foundation.h>
 #import "MADContentValues.h"
-#import "ContentValues.hpp"
+#import "MadContentValues.hpp"
 
 
 @interface MADContentValuesImpl : NSObject <MADContentValues>
 
 - (instancetype)init;
 
-- (std::shared_ptr<ContentValues>)getValues;
+- (std::shared_ptr<madsqlite::MadContentValues>)getValues;
 
 @end

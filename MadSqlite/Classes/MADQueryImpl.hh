@@ -5,10 +5,10 @@
 
 #import <Foundation/Foundation.h>
 #import "MADQuery.h"
-#include "Cursor.hpp"
+#include "MadQuery.hpp"
 
 @interface MADQueryImpl : NSObject <MADQuery>
 
--(instancetype) initWithCursor:(Cursor &)cursor;
+-(instancetype) initWithCursor:(madsqlite::MadQuery &)cursor;
 
 @end

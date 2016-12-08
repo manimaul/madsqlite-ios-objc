@@ -7,12 +7,12 @@
 
 
 @implementation MADQueryImpl {
-    std::unique_ptr<Cursor> curs;
+    std::unique_ptr<madsqlite::MadQuery> curs;
 }
 
--(instancetype) initWithCursor:(Cursor &)cursor {
+-(instancetype) initWithCursor:(madsqlite::MadQuery &)query {
     if (self == [super init]) {
-        curs = std::make_unique<Cursor>(std::move(cursor));
+        curs = std::make_unique<madsqlite::MadQuery>(std::move(query));
         return self;
     } else {
         return nil;
@@ -37,7 +37,7 @@
 }
 
 - (NSData *)getBlob:(int)columnIndex {
-    std::vector<byte> blob = curs->getBlob(columnIndex);
+    std::vector<madsqlite::byte> blob = curs->getBlob(columnIndex);
     return [NSData dataWithBytes:blob.data() length:blob.size()];
 }
 

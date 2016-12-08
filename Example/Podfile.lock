@@ -1,5 +1,5 @@
 PODS:
-  - MadSqlite (0.1.1)
+  - MadSqlite (0.2.0)
 
 DEPENDENCIES:
   - MadSqlite (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  MadSqlite: f08e1e6cb33617ffc5d192b59f05a818997daa07
+  MadSqlite: 7d77792f02f6226f6d826fc5c4ec734bfbed406b
 
 PODFILE CHECKSUM: c7aaffc259bc0c7db242b0ecc20f9b666196b480
 

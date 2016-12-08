@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                   = 'MadSqlite'
-  s.version                = '0.1.1'
+  s.version                = '0.2.0'
 
   s.summary                = 'A simple Sqlite Abstraction'
   s.description            = 'A simple Sqlite Abstraction with FTS5 and R*Tree enabled'
@@ -17,20 +17,21 @@ Pod::Spec.new do |s|
   s.author                 = { 'William Kamp' => 'manimaul@gmail.com' }
   #s.documentation_url      = ''
 
+  #s.source                 = { :git => 'https://github.com/manimaul/madsqlite-ios-objc.git', :tag => s.version.to_s, :submodules => true }
   s.source                 = { :git => 'https://github.com/manimaul/madsqlite-ios-objc.git', :tag => s.version.to_s, :submodules => true }
 
   s.ios.deployment_target  = '8.0'
   s.source_files           = 'MadSqlite/Classes/**/*.{h,m,hh,mm}',
 			     'madsqlite-core/src/main/cpp/*.{hpp}',
-			     'madsqlite-core/src/main/cpp/ContentValues.cpp',
-			     'madsqlite-core/src/main/cpp/Cursor.cpp',
-			     'madsqlite-core/src/main/cpp/Database.cpp',
-			     'madsqlite-core/src/main/cpp/Util.cpp',
-			     'madsqlite-core/src/main/cpp/sqlite-amalgamation-3140200/sqlite3.c',
-                             'madsqlite-core/src/main/cpp/*.{hpp}',
-			     'madsqlite-core/src/main/cpp/sqlite-amalgamation-3140200/sqlite3.h'
+			     'madsqlite-core/src/main/cpp/api/*.{hpp}',
+			     'madsqlite-core/src/main/cpp/MadContentValues.cpp',
+			     'madsqlite-core/src/main/cpp/MadQuery.cpp',
+			     'madsqlite-core/src/main/cpp/MadDatabase.cpp',
+			     'madsqlite-core/src/main/cpp/sqlite-amalgamation/sqlite3.c',
+			     'madsqlite-core/src/main/cpp/sqlite-amalgamation/sqlite3.h'
 
   s.private_header_files   = 'madsqlite-core/src/main/cpp/*.{hpp}',
+                             'madsqlite-core/src/main/cpp/api/*.{hpp}',
                              'MadSqlite/Classes/**/*Impl.{hh}',
                              'madsqlite-core/src/main/cpp/sqlite-amalgamation-3140200/sqlite3.h'
 

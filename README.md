@@ -13,8 +13,8 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'MadSqlite', '~> 0.1.1'
 ```
-or
+or bleeding edge:
 ```ruby
-pod 'MadSqlite', :git => 'https://github.com/manimaul/madsqlite-ios-objc.git', :tag => '0.1.1', :submodules => true
+pod 'MadSqlite', :git => 'https://github.com/manimaul/madsqlite-ios-objc.git', :tag => '0.2.0', :submodules => true
 ```
 

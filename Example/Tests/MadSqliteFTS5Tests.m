@@ -59,26 +59,24 @@
 }
 
 - (void)assertDoesNotMatch:(id <MADDatabase>)md withSql:(NSString *)sql {
-    XCTAssertTrue([self queryMatches:md withSql:sql].count == 0);
+    id <MADQuery> query = [md query:sql];
+    XCTAssertNil([md getError]);
+    XCTAssertFalse([query moveToFirst]);
 }
 
 - (void)assertMatches:(id <MADDatabase>)md withSql:(NSString *)sql {
-    XCTAssertTrue([self queryMatches:md withSql:sql].count > 0);
-}
-
-- (NSArray<NSString *> *)queryMatches:(id <MADDatabase>)md withSql:(NSString *)sql {
     id <MADQuery> query = [md query:sql];
     XCTAssertNil([md getError]);
     XCTAssertTrue([query moveToFirst]);
-    NSMutableArray<NSString *> *rValue = [NSMutableArray new];
+    NSMutableArray<NSString *> *results = [NSMutableArray new];
     while (![query isAfterLast]) {
         NSString *value = [query getString:0];
         if (value.length) {
-            [rValue addObject:value];
+            [results addObject:value];
         }
         [query moveToNext];
     }
-    return rValue;
+    XCTAssertTrue(results.count > 0);
 }
 
 @end

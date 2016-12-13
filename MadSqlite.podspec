@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                   = 'MadSqlite'
-  s.version                = '0.2.0'
+  s.version                = '0.2.1'
 
   s.summary                = 'A simple Sqlite Abstraction'
   s.description            = 'A simple Sqlite Abstraction with FTS5 and R*Tree enabled'
@@ -24,9 +24,9 @@ Pod::Spec.new do |s|
   s.source_files           = 'MadSqlite/Classes/**/*.{h,m,hh,mm}',
 			     'madsqlite-core/src/main/cpp/*.{hpp}',
 			     'madsqlite-core/src/main/cpp/api/*.{hpp}',
-			     'madsqlite-core/src/main/cpp/MadContentValues.cpp',
-			     'madsqlite-core/src/main/cpp/MadQuery.cpp',
-			     'madsqlite-core/src/main/cpp/MadDatabase.cpp',
+			     'madsqlite-core/src/main/cpp/MadContentValuesImpl.cpp',
+			     'madsqlite-core/src/main/cpp/MadQueryImpl.cpp',
+			     'madsqlite-core/src/main/cpp/MadDatabaseImpl.cpp',
 			     'madsqlite-core/src/main/cpp/sqlite-amalgamation/sqlite3.c',
 			     'madsqlite-core/src/main/cpp/sqlite-amalgamation/sqlite3.h'
 

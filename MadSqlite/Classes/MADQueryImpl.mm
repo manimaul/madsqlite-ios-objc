@@ -37,7 +37,7 @@
 }
 
 - (NSData *)getBlob:(int)columnIndex {
-    std::vector<madsqlite::byte> blob = curs->getBlob(columnIndex);
+    std::vector<unsigned char> blob = curs->getBlob(columnIndex);
     return [NSData dataWithBytes:blob.data() length:blob.size()];
 }
 

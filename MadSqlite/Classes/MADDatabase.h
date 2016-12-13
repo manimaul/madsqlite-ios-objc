@@ -53,7 +53,6 @@
  */
 - (NSString *)getError;
 
-
 /**
  * Begins a transaction. The changes will be rolled back if any transaction performed without being commited.
  */

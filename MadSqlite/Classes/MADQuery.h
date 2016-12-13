@@ -25,7 +25,7 @@
 - (BOOL)moveToNext;
 
 /**
- * @return Returns whether the queryy is pointing to the position after the last row.
+ * @return Returns whether the query is pointing to the position after the last row.
  */
 - (BOOL)isAfterLast;
 

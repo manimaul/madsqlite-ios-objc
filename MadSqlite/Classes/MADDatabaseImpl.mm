@@ -15,7 +15,8 @@ std::shared_ptr<madsqlite::MadDatabase> database;
 
 - (instancetype)init {
     if (self = [super init]) {
-        database = madsqlite::MadDatabase::openInMemoryDatabase();
+        auto db = madsqlite::MadDatabase::openInMemoryDatabase();
+        database = std::shared_ptr<madsqlite::MadDatabase>(std::move(db));
         return self;
     } else {
         return nil;

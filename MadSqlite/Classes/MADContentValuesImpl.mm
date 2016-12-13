@@ -4,8 +4,6 @@
 //
 
 #import "MadContentValuesImpl.hh"
-#include "MadConstants.hpp"
-
 
 @implementation MADContentValuesImpl {
 
@@ -34,8 +32,8 @@
 }
 
 - (void)putBlob:(NSString *)key withValue:(NSData *)value {
-    madsqlite::byte *charBuf = (madsqlite::byte *) value.bytes;
-    std::vector<madsqlite::byte> valVec(charBuf, charBuf + value.length);
+    unsigned char *charBuf = (unsigned char *) value.bytes;
+    std::vector<unsigned char> valVec(charBuf, charBuf + value.length);
     contentValues->putBlob(key.UTF8String, valVec);
 }
 

@@ -15,7 +15,7 @@ pod 'MadSqlite', '~> 0.1.1'
 ```
 or bleeding edge:
 ```ruby
-pod 'MadSqlite', :git => 'https://github.com/manimaul/madsqlite-ios-objc.git', :tag => '0.2.0', :submodules => true
+pod 'MadSqlite', :git => 'https://github.com/manimaul/madsqlite-ios-objc.git', :tag => '0.2.1', :submodules => true
 ```
 
 ####Example
@@ -35,7 +35,8 @@ NSData *data = UIImagePNGRepresentation([UIImage imageNamed:@"Cheshire Cat"]);
 [md insert:@"location_table" withValues:cv];
 
 // Query database
-id <MADQuery> query = [md query:@"SELECT name, latitude, longitude FROM location_table WHERE name=?" withArgs:@[@"Cheshire Cat"]];
+id <MADQuery> query = [md query:@"SELECT name, latitude, longitude FROM location_table WHERE name=?" 
+                       withArgs:@[@"Cheshire Cat"]];
 if ([query moveToFirst]) {
     while (![query isAfterLast]) {
         NSString *name = [query getString:0];

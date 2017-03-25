@@ -6,7 +6,6 @@
 #import "MadContentValuesImpl.hh"
 
 @implementation MADContentValuesImpl {
-
     std::shared_ptr<madsqlite::MadContentValues> contentValues;
 }
 

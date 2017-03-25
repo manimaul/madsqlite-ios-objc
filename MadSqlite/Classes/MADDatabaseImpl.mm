@@ -9,9 +9,10 @@
 #import "MADContentValuesImpl.hh"
 #import "MADQueryImpl.hh"
 
-@implementation MADDatabaseImpl
+@implementation MADDatabaseImpl {
+    std::shared_ptr<madsqlite::MadDatabase> database;
+}
 
-std::shared_ptr<madsqlite::MadDatabase> database;
 
 - (instancetype)init {
     if (self = [super init]) {

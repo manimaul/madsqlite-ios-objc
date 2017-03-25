@@ -10,32 +10,32 @@
 /**
  * Adds a value to the set.
  *
- * @param key the name of the value to put.
- * @param value the data for the value to put.
+ * @param key: the name of the value to put.
+ * @param value: the data for the value to put.
  */
 - (void)putInteger:(NSString *)key withValue:(NSNumber *)value;
 
 /**
  * Adds a value to the set.
  *
- * @param key the name of the value to put.
- * @param value the data for the value to put.
+ * @param key: the name of the value to put.
+ * @param value: the data for the value to put.
  */
 - (void)putReal:(NSString *)key withValue:(NSNumber *)value;
 
 /**
  * Adds a value to the set.
  *
- * @param key the name of the value to put.
- * @param value the data for the value to put.
+ * @param key: the name of the value to put.
+ * @param value: the data for the value to put.
  */
 - (void)putString:(NSString *)key withValue:(NSString *)value;
 
 /**
  * Adds a value to the set.
  *
- * @param key the name of the value to put.
- * @param value the data for the value to put.
+ * @param key: the name of the value to put.
+ * @param value: the data for the value to put.
  */
 - (void)putBlob:(NSString *)key withValue:(NSData *)value;
 

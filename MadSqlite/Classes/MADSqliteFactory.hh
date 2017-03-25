@@ -24,9 +24,16 @@
 /**
  * Opens or creates a file system sqlite database.
  *
- * @param name the name of the database
+ * @param name: the name of the database
  * @return a file system sqlite database
  */
 + (id <MADDatabase>)databaseNamed:(NSString *)name;
+
+/**
+ * Opens or creates a file system sqlite database.
+ * @param path: the absolute path of the database
+ * @return a file system sqlite database
+ */
++ (id <MADDatabase>)databaseWithPath:(NSString *)path;
 
 @end

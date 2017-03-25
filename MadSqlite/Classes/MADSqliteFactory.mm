@@ -31,5 +31,13 @@
     return db;
 }
 
++ (id <MADDatabase>)databaseWithPath:(NSString *)path {
+    MADDatabaseImpl *db = [[MADDatabaseImpl alloc] initWithPath:path];
+    if ([db getError]) {
+        return nil;
+    }
+    return db;
+}
+
 
 @end

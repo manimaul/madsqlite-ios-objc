@@ -31,8 +31,8 @@
 /**
  * Query for results with bound arguments.
  *
- * @param sql - a sqlite query containing arguments.
- * @param args You may include ?s in sql, which will be replaced by the values from args, in order that they appear in
+ * @param sql: - a sqlite query containing arguments.
+ * @param args: You may include ?s in sql, which will be replaced by the values from args, in order that they appear in
  * the selection. The values will be bound as Strings.
  * @return query results.
  */
@@ -41,7 +41,7 @@
 /**
  * Execute a single SQL statement that is NOT a SELECT or any other SQL statement that returns data.
  *
- * @param sql the sql to execute.
+ * @param sql: the sql to execute.
  * @return the number of rows changed.
  */
 - (NSInteger)exec:(NSString *)sql;

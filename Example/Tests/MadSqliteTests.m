@@ -182,7 +182,7 @@
     XCTAssertNil([md getError]);
 }
 
-- (void)testFileSystemDatabase {
+- (void)testFileSystemDatabaseNamed {
     // ~/Library/Developer/CoreSimulator/Devices/ED77F264-2FF3-4DBF-A2F6-F8CBC2D6EE15/data/Library/test.s3db
     id <MADDatabase> md = [MADSqliteFactory databaseNamed:@"test.s3db"];
     [md exec:@"DROP TABLE IF EXISTS test"];
@@ -191,6 +191,27 @@
     XCTAssertNil([md getError]);
 
     [self multiIndexQuery:md];
+}
+
+- (void)testFileSystemDatabasePath {
+    NSMutableString *mutableString = [NSMutableString stringWithString:
+                                      [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0]];
+    [mutableString appendString:@"/"];
+    [mutableString appendString:@"test.s3db"];
+    
+    // ~/Library/Developer/CoreSimulator/Devices/ED77F264-2FF3-4DBF-A2F6-F8CBC2D6EE15/data/Library/test.s3db
+    id <MADDatabase> md = [MADSqliteFactory databaseWithPath:mutableString];
+    [md exec:@"DROP TABLE IF EXISTS test"];
+    XCTAssertNil([md getError]);
+    [md exec:@"CREATE TABLE test(keyInt INTEGER, keyReal REAL, keyText TEXT);"];
+    XCTAssertNil([md getError]);
+    
+    [self multiIndexQuery:md];
+}
+
+- (void)testFileSystemDatabasePathDoesNotExist {
+    id <MADDatabase> md = [MADSqliteFactory databaseWithPath:@"/some/nonexistent/path.s3db"];
+    XCTAssertNil(md);
 }
 
 - (void)multiIndexQuery:(id <MADDatabase>)md {

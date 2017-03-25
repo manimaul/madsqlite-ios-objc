@@ -30,25 +30,25 @@
 - (BOOL)isAfterLast;
 
 /**
- * @param columnIndex the zero-based index of the target column.
+ * @param columnIndex: the zero-based index of the target column.
  * @return the value of that column as a String.
  */
 - (NSString *)getString:(int)columnIndex;
 
 /**
- * @param columnIndex the zero-based index of the target column.
+ * @param columnIndex: the zero-based index of the target column.
  * @return the value of that column as data.
  */
 - (NSData *)getBlob:(int)columnIndex;
 
 /**
- * @param columnIndex the zero-based index of the target column.
+ * @param columnIndex: the zero-based index of the target column.
  * @return the value of that column a long long integer.
  */
 - (NSNumber *)getInt:(int)columnIndex;
 
 /**
- * @param columnIndex the zero-based index of the target column.
+ * @param columnIndex: the zero-based index of the target column.
  * @return the value of that column as a double.
  */
 - (NSNumber *)getReal:(int)columnIndex;

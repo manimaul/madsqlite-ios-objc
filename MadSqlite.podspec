@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                   = 'MadSqlite'
-  s.version                = '0.2.1'
+  s.version                = '0.2.2'
 
   s.summary                = 'A simple Sqlite Abstraction'
   s.description            = 'A simple Sqlite Abstraction with FTS5 and R*Tree enabled'
@@ -17,7 +17,6 @@ Pod::Spec.new do |s|
   s.author                 = { 'William Kamp' => 'manimaul@gmail.com' }
   #s.documentation_url      = ''
 
-  #s.source                 = { :git => 'https://github.com/manimaul/madsqlite-ios-objc.git', :tag => s.version.to_s, :submodules => true }
   s.source                 = { :git => 'https://github.com/manimaul/madsqlite-ios-objc.git', :tag => s.version.to_s, :submodules => true }
 
   s.ios.deployment_target  = '8.0'
@@ -43,5 +42,5 @@ Pod::Spec.new do |s|
        'CLANG_CXX_LIBRARY' => 'libc++',
        'OTHER_CFLAGS' => '-DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_RTREE'
   }
- 
+
 end
